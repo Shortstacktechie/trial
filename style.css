@@ -1,0 +1,73 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 
+        'a a a a'
+        'b c c d'
+        'b c c e'
+        'f f f f'
+    ;
+    row-gap: 0.5rem;
+    column-gap: 0.2rem;
+}
+
+header{
+    background-color: pink;
+    grid-area: a;
+}
+
+aside{
+    background-color: brown;
+    grid-area: b;
+}
+
+main{
+    background-color: peru;
+    grid-area: c;
+}
+
+.article1{
+    background-color: blue;
+    grid-area: d;
+}
+
+.article2{
+    background-color: aqua;
+    grid-area: e;
+}
+
+footer{
+    background-color: green;
+    grid-area: f;
+}
+
+@media screen and (max-width:768px){
+    body{
+        grid-template-areas:
+        'a a'
+        'b c'
+        'd e'
+        'f f'
+        ;
+    }
+}
+@media screen and (max-width: 375px){
+    body{
+        grid-template-areas: 
+        'a'
+        'b'
+        'c'
+        'd'
+        'e'
+        'f'
+        
+        ;
+    }
+}
